@@ -18,3 +18,15 @@ for (let i = 0; i < lista.length; i++) {
         console.log(lista[i]);
     }
 }
+function bestof(lista) {
+    var legNagyobb = 0;
+    var index = 0;
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i].rating > legNagyobb) {
+            legNagyobb = lista[i].rating;
+            index = i;
+        }
+    }
+    console.log("\nLegnagyobb értékelésű könyv:\n" + lista[index] + "\n");
+}
+bestof(lista);
